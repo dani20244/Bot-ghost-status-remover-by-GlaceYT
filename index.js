@@ -37,8 +37,8 @@ app.listen(port, () => {
   console.log('\x1b[36m[ SERVER ]\x1b[0m', '\x1b[32m SH : http://localhost:' + port + ' ✅\x1b[0m');
 });
 
-const statusMessages = ["🎧 Listening to Spotify", "🎮 Playing VALORANT"];
-const statusTypes = [ 'dnd', 'idle'];
+const statusMessages = ["My owner+dev: dana2 👩‍💻", "בשביל לראות את כל הפקודות שלי: !help"];
+const statusTypes = [ 'dnd', 'dnd'];
 let currentStatusIndex = 0;
 let currentTypeIndex = 0;
 
@@ -61,7 +61,7 @@ function updateStatus() {
     activities: [{ name: currentStatus, type: ActivityType.Custom }],
     status: currentType,
   });
-  console.log('\x1b[33m[ STATUS ]\x1b[0m', `Updated status to: ${currentStatus} (${currentType})`);
+  console.log('\x1b[33m[ STATUS ]\x1b[0m', `Updated status to: `${totalMembers} members | !help`, type: ActivityType.Watching)`);
   currentStatusIndex = (currentStatusIndex + 1) % statusMessages.length;
   currentTypeIndex = (currentTypeIndex + 1) % statusTypes.length;
 }
